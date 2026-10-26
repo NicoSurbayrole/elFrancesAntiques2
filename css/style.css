@@ -520,23 +520,135 @@ body {
   }
 }
 
-.section__card-info--horarios{
+.section__card-info--horarios {
   align-items: start;
-  div p, svg{
+
+  div p,
+  svg {
     margin: 5px;
   }
 }
 
-.section__card-info--redes svg{
+.section__card-info--redes svg {
   height: 25px;
   width: 25px;
 }
 
-.section__card-img{
+.section__card-img {
   background-color: #0f0f0fe7;
   display: flex;
   align-items: center;
   padding: 10px;
   border-radius: 100%;
   margin-right: 10px;
+}
+
+@media(max-width: 930px) {
+  .nosotros {
+    flex-direction: column;
+    min-height: 200vh;
+  }
+}
+
+/* =============================== 
+            FOOTER
+===============================*/
+footer {
+  background-color: var(--bg-color-600);
+  margin-top: 60px;
+  padding-inline: 30px;
+}
+
+.footer__container {
+  display: flex;
+  gap: 50px;
+}
+
+.footer__colum {
+  flex: 1;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__logo-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__logo-icon {
+  color: var(--icon-color);
+  align-content: center;
+}
+
+.footer__logo-title {
+  font-size: 1.8rem;
+}
+
+.footer__logo-subtitle {
+  color: var(--text-color-500);
+}
+
+.footer__icon-parrafo {
+  font-size: 0.9rem;
+  text-wrap: balance;
+  text-align: center;
+  color: #ffffffa8;
+  margin-top: 20px;
+}
+
+.footer__title {
+  color: var(--text-color-500);
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 15px 0;
+}
+
+.footer__enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+
+}
+
+.footer__list-link a {
+  color: #ffffffa8;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: #c69d23;
+    text-decoration: underline;
+  }
+}
+
+.footer__ubicacion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  span {
+    color: #ffffffa8;
+  }
+}
+
+.footer__icon a svg {
+  fill: var(--text-color-500);
+  transition: transform 0.4s ease-in-out;
+
+  &:active {
+    transform: scale(0.94);
+  }
+}
+
+.footer__icon-container {
+  display: flex;
+  gap: 20px;
 }
