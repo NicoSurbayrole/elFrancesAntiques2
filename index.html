@@ -22,13 +22,23 @@
     </div>
     <nav class="navbar">
       <ul class="navbar__lista">
-        <li class="navbar__link">INICIO</li>
-        <li class="navbar__link">PRODUCTOS</li>
-        <li class="navbar__link">SOBRE NOSOTROS</li>
-        <li class="navbar__link">CONTACTO</li>
-        <li class="navbar__link navbar__link--remate">
-          SALA DE REMATES ONLINE
-        </li>
+        <a href="#hero">
+          <li class="navbar__link">INICIO</li>
+        </a>
+        <a href="#productos">
+          <li class="navbar__link">PRODUCTOS</li>
+        </a>
+        <a href="#nosotros">
+          <li class="navbar__link">SOBRE NOSOTROS</li>
+        </a>
+        <a href="#contacto">
+          <li class="navbar__link">CONTACTO</li>
+        </a>
+        <a href="/">
+          <li class="navbar__link navbar__link--remate">
+            SALA DE REMATES ONLINE
+          </li>
+        </a>
       </ul>
     </nav>
     <div class="header__menu-container">
@@ -40,7 +50,7 @@
     </div>
   </header>
   <main>
-    <section class="hero">
+    <section id="hero" class="hero">
       <div>
         <h1 class="hero__title">EL FRANCÉS ANTIQUES</h1>
       </div>
@@ -64,7 +74,7 @@
         </div>
       </div>
     </section>
-    <section class="nosotros">
+    <section id="nosotros" class="nosotros">
       <h2 class="nosotros__title">SOBRE NOSOTROS</h2>
       <div class="nosotros__article-img-contain">
         <article class="nosotros__article">
@@ -286,6 +296,7 @@
     </div>
   </footer>
 </body>
+<script type="module" src="./js/scroll.js"></script>
 <script type="module" src="./js/productos.js"></script>
 
 </html>
