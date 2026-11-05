@@ -1,38 +1,67 @@
 import { renderProducts } from "./renderProducts.js";
 
-export const pagincaion = (products) => {
-    let indice_principal = 0;
-    let indice_final = 8;
+export const pagination = (products) => {
+    let startIndex = 0;
+    let endIndex = 8;
+    let currentPage = 1;
 
-    const handel_perv_page = () => {
-        if (indice_principal === 0) return
+    const changePage = (page) => {
 
-        indice_principal -= 8;
-        indice_final -= 8;
+        let totalPages = Math.ceil(products.length / 8);
 
-        let productos = products.slice(indice_principal, indice_final)
+        if (page < 1 || page > totalPages) return;
 
-        renderProducts(productos)
+        startIndex = (page - 1) * 8;
+        endIndex = page * 8;
+        currentPage = page;
+
+        let productsToRender = products.slice(startIndex, endIndex);
+        renderProducts(productsToRender);
+
+        const buttons = document.querySelectorAll("[data-page]");
+
+        buttons.forEach(btn => {
+            btn.classList.remove("is-active");
+        });
+
+        document.querySelector(`[data-page="${page}"]`).classList.add("is-active");
     }
 
-    const handel_next_page = () => {
-        if (indice_final >= products.length) return
-        indice_principal += 8;
-        indice_final += 8;
+    createPagination(products, (page => {
+        changePage(page)
+    }))
 
 
-        let productos = products.slice(indice_principal, indice_final)
+    const prevButton = document.getElementById("prev")
+    const nextButton = document.getElementById("next")
 
-        renderProducts(productos)
+    prevButton.addEventListener("click", () => changePage(currentPage - 1))
+    nextButton.addEventListener("click", () => changePage(currentPage + 1))
+
+    changePage(currentPage)
+}
+
+
+const createPagination = (products, callback) => {
+    const paginationContainer = document.getElementById("number__pagination")
+    let pages = Math.ceil(products.length / 8);
+
+    for (let i = 1; i <= pages; i++) {
+        if (i === 1) {
+            paginationContainer.innerHTML += `<button class="btn__number-pagination is-active" data-page="1">${i}</button>`
+        } else {
+            paginationContainer.innerHTML += `<button class="btn__number-pagination" data-page=${i}>${i}</button>`
+        }
     }
 
-    const prev_page = document.getElementById("prev")
-    const next_page = document.getElementById("next")
+    handlePageClick(paginationContainer, callback)
+}
 
-    prev_page.addEventListener("click", handel_perv_page)
-    next_page.addEventListener("click", handel_next_page)
+const handlePageClick = (paginationContainer, callback) => {
+    const paginationButtons = paginationContainer.querySelectorAll("[data-page]");
 
-    let productos = products.slice(indice_principal, indice_final)
-
-    renderProducts(productos)
+    paginationButtons.forEach(button => button.addEventListener("click", (event) => {
+        const page = Number(event.currentTarget.dataset.page);
+        callback(page);
+    }))
 }
