@@ -1,5 +1,4 @@
-function scrollControlado() {
-    
+function scrollControlado() {    
     const links = document.querySelectorAll('.navbar__link, .navbar__link--remate, .footer__list-link a, a[href^="#"]');
     const headerNav = document.querySelector('.header-nav');
 
