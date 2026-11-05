@@ -1,0 +1,20 @@
+EL FRANCES ANTIQUES - IMAGENES DE PRODUCTOS
+
+Archivos PNG numerados para vincular con el JSON:
+
+1.png - Espejo sol de madera dorada
+2.png - Mesa de luz de roble con marmol
+3.png - Arana de cristal de seis luces
+4.png - Juego de te de plata
+5.png - Oleo de paisaje de campo
+6.png - Reloj de mesa de bronce y porcelana
+7.png - Sillon Luis XV verde
+8.png - Florero de cristal tallado
+9.png - Comoda antigua con marqueteria
+10.png - Par de candelabros de bronce
+
+Los productos repetidos del JSON pueden reutilizar estas mismas imagenes:
+ID 1, 11 y 21 -> 1.png; ID 2, 12 y 22 -> 2.png; y asi sucesivamente.
+La regla general es: ((id - 1) % 10) + 1.
+
+Las imagenes son ilustrativas, generadas por IA; no representan fotografias documentales de piezas reales.
