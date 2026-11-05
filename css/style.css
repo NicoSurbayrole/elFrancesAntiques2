@@ -358,6 +358,9 @@ body {
 }
 
 @media (max-width:500px) {
+  .hero {
+    justify-content: center;
+  }
 
   .hero__sub-title,
   .hero__title {
