@@ -1,10 +1,10 @@
 const productos_container = document.getElementById("productos_container")
 
 export const renderProducts = (productos) => {
-    productos_container.innerHTML = productos.map(({id, nombre, precio_ars }) => `
+    productos_container.innerHTML = productos.map(({id, nombre, precio_ars, img_url }) => `
     <div class="product__card">
          <div>
-           <img class="product__img" src="./img/alfombra_img" alt="">
+           <img class="product__img" src="${img_url}" alt=${nombre}>
          </div>
          <div class="product__info">
            <h3 class="product__title"> ${nombre}</h3>
