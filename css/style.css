@@ -964,6 +964,58 @@ body {
   transform: scaleX(1);
 }
 
+/* =============================== 
+            PAGINACION
+===============================*/
+.paginacion__container {
+  display: flex;
+  justify-content: center;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+  min-width: 400px;
+  border: 1px solid #c69d2380;
+  padding: 10px;
+  box-shadow: 0px 0px 4px #c69d23;
+}
+
+.btn__paginacion {
+  padding: 2px 20px;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  color: black;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn__number-container {
+  display: flex;
+  gap: 10px;
+}
+
+.btn__number-pagination {
+  background-color: #fff;
+  color: black;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 2px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.is-active {
+  background-color: #c69d23;
+}
+
+.btn__paginacion:active,
+.btn__number-pagination:active {
+  transform: scale(0.96);
+}
 
 /* =============================== 
             FOOTER
