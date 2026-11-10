@@ -1024,7 +1024,7 @@ body {
             WPP
 ===============================*/
 
-.logo__wpp{
+.logo__wpp {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -1249,4 +1249,71 @@ footer {
     gap: 20px;
     justify-content: start;
   }
+}
+
+/* =============================== 
+            MODAL LOGIN
+===============================*/
+
+.login__blur {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.login__blur.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.login__modal {
+  width: 400px;
+  padding: 2rem;
+  background:
+    radial-gradient(circle at 50% 50%,
+      rgba(198, 157, 35, 0.12),
+      transparent 90%),
+    linear-gradient(130deg, #0f0f0f, #1a1a1a);
+  border-radius: 10px;
+}
+
+.log__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.log_title {
+  color: #c69d23;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.log__input {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #c69d23;
+  outline: none;
+  padding: 4px;
+}
+
+.log__btn {
+  color: #000;
+  padding: 4px;
+  border-radius: 5px;
+  border: 1px solid #c69d23;
+  background-color: transparent;
+  color: #c69d23;
+  cursor: pointer;
+  text-transform: uppercase;
 }
