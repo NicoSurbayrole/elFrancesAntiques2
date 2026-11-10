@@ -1,4 +1,4 @@
-import { getUsers } from "../users/getUsers.js"
+import { getSingleUser } from "../users/getSingleUser.js"
 
 const btn_log = document.getElementById("login")
 const loginContain = document.getElementById("log_contain")
@@ -28,9 +28,7 @@ loginContain.addEventListener("click", (e) => {
 });
 
 async function validateUser(email, password) {
-    const users = await getUsers()
-
-    const user = users.find(user => user.email === email)
+    const user = await getSingleUser(email)
 
     if (!user) {
         alert("el usuario no existe")
@@ -41,8 +39,10 @@ async function validateUser(email, password) {
         const user_name = document.getElementById("user_name")
         user_name.innerText = `Bienvenido: ${user.name}`
         user_icon.style.display = "none"
+        btn_log.style.pointerEvents = "none"
         alert("usuario logueado correctamente")
         closeOpenModal()
+
     } else {
         alert("usuario o contraseña incorrectos")
     }
