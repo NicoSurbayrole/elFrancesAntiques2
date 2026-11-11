@@ -1,0 +1,44 @@
+.admin__main {
+    height: calc(100vh - 369px);
+}
+
+.panel__admin {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin: 20px 0;
+}
+
+.admin__options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    width: 300px;
+    border: 1px solid #C69D23;
+    box-shadow: 0 0 10px 0 #C69D23;
+}
+
+.admin__btn{
+    width: 200px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #C69D23;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    & a{    
+        color: #C69D23;
+        text-transform: uppercase;
+    }
+}
+
+.admin__btn:active{
+    transform: scale(0.98);
+}
+
+footer {
+    margin-top: 20px;
+}
