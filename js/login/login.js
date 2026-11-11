@@ -9,11 +9,15 @@ const user_icon = document.getElementById("user_log-icon")
 
 btn_log.addEventListener("click", closeOpenModal)
 
-loginForm.addEventListener("submit", (e) => { loginUser(e) });
+if (loginForm) {
+    loginForm.addEventListener("submit", (e) => { loginUser(e) });
+}
 
-loginContain.addEventListener("click", (e) => {
-    e.target === loginContain ? loginContain.classList.remove("is-active") : "";
-});
+if (loginContain) {
+    loginContain.addEventListener("click", (e) => {
+        e.target === loginContain ? loginContain.classList.remove("is-active") : "";
+    });
+}
 
 function closeOpenModal() {
     loginContain.classList.toggle("is-active")

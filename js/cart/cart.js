@@ -4,14 +4,14 @@ const product_container = document.getElementById("productos_container")
 let cuantity_products = document.getElementById("cuantity__products")
 
 
+if (product_container) {
+    product_container.addEventListener("click", (e) => {
+        let userLoged = localStorage.getItem("user")
+        userLoged = JSON.parse(userLoged)
 
-
-product_container.addEventListener("click", (e) => {
-    let userLoged = localStorage.getItem("user")
-    userLoged = JSON.parse(userLoged)
-
-    userLoged ? addToCartLoged(e, userLoged) : addToCartUnLoged(e)
-})
+        userLoged ? addToCartLoged(e, userLoged) : addToCartUnLoged(e)
+    })
+}
 
 
 function addToCartUnLoged(e) {
