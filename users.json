@@ -4,13 +4,15 @@
         "email": "hernan@admin.com",
         "password": "hernan1234",
         "role": "admin",
-        "id": "1"
+        "id": "1",
+        "cart": []
     },
     {
         "name":"nicolas",
         "email": "nico@user.com",
         "password": "1234",
         "role": "user",
-        "id": "2"
+        "id": "2",
+        "cart": []
     }
 ]
