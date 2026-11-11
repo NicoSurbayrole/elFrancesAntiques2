@@ -1,3 +1,4 @@
+import { isAdmin } from "../admin/admin.js";
 import { getSingleUser } from "../users/getSingleUser.js"
 
 const btn_log = document.getElementById("login")
@@ -42,6 +43,7 @@ async function validateUser(email, password) {
         btn_log.style.pointerEvents = "none"
         alert("usuario logueado correctamente")
         closeOpenModal()
+        isAdmin(user) 
 
     } else {
         alert("usuario o contraseña incorrectos")
