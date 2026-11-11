@@ -3,7 +3,14 @@
         "name":"hernan",
         "email": "hernan@admin.com",
         "password": "hernan1234",
-        "rol": "admin",
+        "role": "admin",
         "id": "1"
+    },
+    {
+        "name":"nicolas",
+        "email": "nico@user.com",
+        "password": "1234",
+        "role": "user",
+        "id": "2"
     }
 ]
