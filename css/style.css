@@ -1317,3 +1317,7 @@ footer {
   cursor: pointer;
   text-transform: uppercase;
 }
+
+.is-admin{
+  display: none;
+}
