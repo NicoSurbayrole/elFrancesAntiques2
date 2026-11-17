@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../img/faviconSubastas32x32.png">
+    <link rel="icon" type="image/png" href="../../img/faviconSubastas32x32.png">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/crearProducto.css">
     <title>El Frances Antiques || Art & Deco | Admin - Crear Producto</title>
@@ -100,35 +100,39 @@
                 <form class="admin__form">
                     <div class="admin__campo">
                         <label for="product-name">Nombre del producto</label>
-                        <input class="admin__form-input" id="product-name" name="nombre" type="text" >
+                        <input class="admin__form-input" id="product-name" name="nombre" type="text" required>
                     </div>
                     <div class="admin__campo">
                         <label for="product-categoria">Categoria del producto</label>
-                        <input class="admin__form-input" id="product-categoria" name="categoria" type="text" >
+                        <input class="admin__form-input" id="product-categoria" name="categoria" type="text"
+                            placeholder="Default otro">
                     </div>
                     <div class="admin__campo">
                         <label for="product-estilo">Estilo del producto</label>
-                        <input class="admin__form-input" id="product-estilo" name="estilo" type="text" >
+                        <input class="admin__form-input" id="product-estilo" name="estilo" type="text"
+                            placeholder="Default antiguo">
                     </div>
                     <div class="admin__campo">
                         <label for="product-precioARS">Precio del producto</label>
                         <input class="admin__form-input" id="product-precioARS" name="precio_ars" type="number"
-                            >
+                            placeholder="Default 0">
                     </div>
                     <div class="admin__campo">
                         <label for="product-imgUrl">Url img del producto</label>
-                        <input class="admin__form-input" id="product-imgUrl" name="img_url" type="text" >
+                        <input class="admin__form-input" id="product-imgUrl" name="img_url" type="text"
+                            placeholder="Default url predeterminada">
                     </div>
                     <div class="admin__campo">
                         <label for="product-disponibilidad">Disponibilidad del producto</label>
                         <input class="admin__form-input" id="product-disponibilidad" name="disponibilidad" type="text"
-                            >
+                            placeholder="Default disponible">
                     </div>
                     <div class="admin__campo">
                         <label for="product-stock">Stock del producto</label>
-                        <input class="admin__form-input" id="product-stock" name="stock" type="number" >
+                        <input class="admin__form-input" id="product-stock" name="stock" type="number"
+                            placeholder="Default 0">
                     </div>
-                    <button class="admin__form-btn" type="submit">Crear producto</button>
+                    <button class="admin__form-btn" type="submit"> Crear producto </button>
                 </form>
             </div>
 
