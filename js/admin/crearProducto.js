@@ -55,11 +55,11 @@ async function productExists(newProduct) {
 }
 
 function saveProduct(newProduct) {
-    const productosCreados = JSON.parse(localStorage.getItem("productoNuevo")) || [];
+    const productosCreados = JSON.parse(localStorage.getItem("productosNuevos")) || [];
 
     productosCreados.push(newProduct);
 
-    localStorage.setItem("productoNuevo", JSON.stringify(productosCreados));
+    localStorage.setItem("productosNuevos", JSON.stringify(productosCreados));
 
     alert("Producto creado correctamente");
 }
