@@ -26,7 +26,7 @@ function getInfoNewProducts() {
         categoria: formData.get("categoria") || "otro",
         estilo: formData.get("estilo") || "antiguo",
         precio_ars: formData.get("precio_ars") || 0,
-        img_url: formData.get("img_url") || "https://i.ibb.co/CKtXjMHR/1.png",
+        img_url: formData.get("img_url") || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa4V7DhRk9uJScPXqy-CVAxZm3ThXVE-8orcOeF-a5lA&s=10",
         disponibilidad: formData.get("disponibilidad") || "disponible",
         stock: formData.get("stock") || 1,
         id: cantidadProductos
