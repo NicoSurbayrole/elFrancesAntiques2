@@ -1,6 +1,6 @@
 export async function getSingleUser(email) {
     try {
-        const res = await fetch("./users.json")
+        const res = await fetch("/users.json")
 
         if (!res.ok) {
             throw new Error("Error al obtener los usuarios")
