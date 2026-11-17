@@ -26,7 +26,7 @@ function getInfoNewProducts() {
         categoria: formData.get("categoria"),
         estilo: formData.get("estilo"),
         precio: formData.get("precio_ars"),
-        url: "./img/products_img/1.png",
+        url: "https://ibb.co/8DL8wCQ0",
         disponibilidad: formData.get("disponibilidad"),
         stock: formData.get("stock"),
         id: cantidadProductos
