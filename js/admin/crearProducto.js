@@ -42,7 +42,7 @@ async function productExists(newProduct) {
         product => product.nombre.toLowerCase() === newProduct.nombre.toLowerCase()
     );
 
-    const productosCreados = JSON.parse(localStorage.getItem("productoNuevo"))
+    const productosCreados = JSON.parse(localStorage.getItem("productosNuevos"))
 
 
     if (!existProduct && productosCreados) {
