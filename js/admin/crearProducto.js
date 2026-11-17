@@ -4,11 +4,13 @@ import { isAdmin } from "../admin/admin.js"
 const form = document.querySelector(".admin__form")
 
 let userLogged = JSON.parse(localStorage.getItem("user")) || ""
+let cantidadProductos = 30;
 
 
 if (userLogged.role === "admin") {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
+        cantidadProductos++
         getInfoNewProducts()
     });
 } else {
@@ -19,7 +21,6 @@ if (userLogged.role === "admin") {
 
 function getInfoNewProducts() {
     const formData = new FormData(form);
-
     const newProduct = {
         nombre: formData.get("nombre"),
         categoria: formData.get("categoria"),
@@ -28,9 +29,8 @@ function getInfoNewProducts() {
         url: "./img/products_img/1.png",
         disponibilidad: formData.get("disponibilidad"),
         stock: formData.get("stock"),
+        id: cantidadProductos
     }
-
-
     productExists(newProduct)
 }
 
