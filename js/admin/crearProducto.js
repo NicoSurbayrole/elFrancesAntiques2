@@ -23,12 +23,12 @@ function getInfoNewProducts() {
     const formData = new FormData(form);
     const newProduct = {
         nombre: formData.get("nombre"),
-        categoria: formData.get("categoria"),
-        estilo: formData.get("estilo"),
-        precio: formData.get("precio_ars"),
-        url: "https://ibb.co/8DL8wCQ0",
-        disponibilidad: formData.get("disponibilidad"),
-        stock: formData.get("stock"),
+        categoria: formData.get("categoria") || "otro",
+        estilo: formData.get("estilo") || "antiguo",
+        precio_ars: formData.get("precio_ars") || 0,
+        img_url: formData.get("img_url") || "https://i.ibb.co/CKtXjMHR/1.png",
+        disponibilidad: formData.get("disponibilidad") || "disponible",
+        stock: formData.get("stock") || 1,
         id: cantidadProductos
     }
     productExists(newProduct)
