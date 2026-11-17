@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../img/faviconSubastas32x32.png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/admin.css">
     <title>El Frances Antiques || Art & Deco - Panel Del Admin</title>
@@ -74,13 +75,29 @@
         </div>
     </header>
     <main class="admin__main">
+        <div id="log_contain" class="login__blur">
+            <div class="login__modal">
+                <form class="log__form" action="">
+                    <label class="log_title" for="log-email">Email</label>
+                    <input class="log__input" name="log-email" id="log-email" type="email" required>
+                    <label class="log_title" for="log-password">Contraseña</label>
+                    <input class="log__input" name="log-password" id="log-password" type="password" required>
+                    <button id="login_btn" class="log__btn" type="submit">iniciar sesion</button>
+                    <div style="text-align: center; margin-top: 10px; font-size: 0.8rem;">
+                        <span>Todavia no te registraste?</span>
+                        <a href="/index.html"
+                            style="color: #c69d23; text-decoration: underline; cursor: pointer;">Registrarse!</a>
+                    </div>
+                </form>
+            </div>
+        </div>
         <section class="panel__admin">
             <div class="admin__options">
-                <button class="admin__btn"><a href="./agregarAdmin">Agrgear Admin</a></button>
-                <button class="admin__btn"><a href="./eliminarAdmin">Eliminar Admin</a></button>
-                <button class="admin__btn"><a href="./producto-crear">Crear Producto</a></button>
-                <button class="admin__btn"><a href="./producto-eliminar">Eliminar Producto</a></button>
-                <button class="admin__btn"><a href="./producto-editar">Editar Producto</a></button>
+                <button class="admin__btn"><a href="./admin/agregarAdmin">Agrgear Admin</a></button>
+                <button class="admin__btn"><a href="./admin/eliminarAdmin">Eliminar Admin</a></button>
+                <button class="admin__btn"><a href="./admin/crearProducto.html">Crear Producto</a></button>
+                <button class="admin__btn"><a href="./admin/eliminarProducto.html">Eliminar Producto</a></button>
+                <button class="admin__btn"><a href="./admin/editarProducto.html">Editar Producto</a></button>
             </div>
         </section>
     </main>
@@ -148,7 +165,9 @@
                 reservados.</p>
         </div>
     </footer>
-    <script type="module" src="../js/admin/mainAdmin.js"></script>
-    <script type="module" src="../js/cart/cart.js"></script>
 </body>
+<script type="module" src="../js/admin/mainAdmin.js"></script>
+<script type="module" src="../js/cart/cart.js"></script>
+<script type="module" src="../js/login/login.js"></script>
+
 </html>
