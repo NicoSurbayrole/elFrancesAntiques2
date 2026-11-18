@@ -1,6 +1,6 @@
 import { renderProducts } from "./renderProducts.js";
 
-export const pagination = (products) => {
+export const pagination = (products, renderFunction) => {
     let startIndex = 0;
     let endIndex = 8;
     let currentPage = 1;
@@ -16,7 +16,7 @@ export const pagination = (products) => {
         currentPage = page;
 
         let productsToRender = products.slice(startIndex, endIndex);
-        renderProducts(productsToRender);
+        renderFunction(productsToRender);
 
         const buttons = document.querySelectorAll("[data-page]");
 
@@ -24,7 +24,10 @@ export const pagination = (products) => {
             btn.classList.remove("is-active");
         });
 
-        document.querySelector(`[data-page="${page}"]`).classList.add("is-active");
+        const activeButton = document.querySelector(`[data-page="${page}"]`);
+
+        if (activeButton) activeButton.classList.add("is-active");
+
     }
 
     createPagination(products, (page => {
@@ -46,6 +49,8 @@ const createPagination = (products, callback) => {
     const paginationContainer = document.getElementById("number__pagination")
     let pages = Math.ceil(products.length / 8);
 
+    paginationContainer.innerHTML = "";
+    
     for (let i = 1; i <= pages; i++) {
         if (i === 1) {
             paginationContainer.innerHTML += `<button class="btn__number-pagination is-active" data-page="1">${i}</button>`

@@ -1,4 +1,5 @@
 import { getProducts } from "../products/getProducts.js"
+import { pagination } from "../products/pagination.js"
 
 const listaProductos = document.getElementById("eliminarProducto")
 let productos = await getProducts()
@@ -20,7 +21,7 @@ function viewProducts(productos) {
 }
 
 
-viewProducts(productos)
+pagination(productos, viewProducts)
 
 listaProductos.addEventListener("click", (e) => {
     const btn = e.target.closest(".eliminarProducto__btn");
@@ -35,6 +36,6 @@ listaProductos.addEventListener("click", (e) => {
 
     localStorage.setItem("productos", JSON.stringify(productos));
     alert("producto eliminado correctamente")
-    viewProducts(productos);
+    pagination(productos,viewProducts);
 });
 
