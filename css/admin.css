@@ -1,12 +1,12 @@
 .admin__main {
-    height: calc(100vh - 369px);
+    height: calc(100vh - 361px);
 }
 
 .panel__admin {
     display: flex;
     justify-content: center;
     height: 100%;
-    margin: 20px 0;
+    margin: 20px 0; 
 }
 
 .admin__options {
