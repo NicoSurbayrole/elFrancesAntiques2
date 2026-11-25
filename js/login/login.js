@@ -2,12 +2,12 @@ import { isAdmin } from "../admin/admin.js";
 import { renderCarrito } from "../cart/cart.js";
 import { getSingleUser } from "../users/getSingleUser.js"
 
-const btn_log = document.getElementById("login")
 const loginContain = document.getElementById("log_contain")
 const loginForm = document.querySelector(".log__form");
 const user_icon = document.getElementById("user_log-icon")
+const btn_logOut = document.querySelector(".btn__logOut")
 
-btn_log.addEventListener("click", closeOpenModal)
+user_icon.addEventListener("click", closeOpenModal)
 
 if (loginForm) {
     loginForm.addEventListener("submit", (e) => { loginUser(e) });
@@ -17,6 +17,19 @@ if (loginContain) {
     loginContain.addEventListener("click", (e) => {
         e.target === loginContain ? loginContain.classList.remove("is-active") : "";
     });
+}
+
+if (btn_logOut) {
+    btn_logOut.addEventListener("click", logOut)
+}
+
+function logOut() {
+    localStorage.removeItem("user")
+    user_icon.style.display = "block";
+    btn_logOut.classList.toggle("is-logged")
+
+    document.getElementById("user_name").innerText = "";
+    alert("sesion cerrada")
 }
 
 function closeOpenModal() {
@@ -53,9 +66,9 @@ export function createUserCredentials(user) {
 
     user_name.innerText = `Bienvenido: ${user.name}`
     user_icon.style.display = "none"
-
-    btn_log.style.pointerEvents = "none"
+    btn_logOut.classList.toggle("is-logged")
 
     isAdmin(user)
     renderCarrito(user.cart)
 }
+
