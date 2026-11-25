@@ -3,25 +3,32 @@ export async function getProducts() {
         const url = new URL("../../productos.json", import.meta.url);
         const res = await fetch(url);
 
-        const productosNuevos = JSON.parse(localStorage.getItem("productosNuevos"))
-        const validateEliminateProduct = JSON.parse(localStorage.getItem("productos"))
-
         if (!res.ok) {
-            throw new Error("Error al obtener los productos")
+            throw new Error("Error al obtener los productos");
         }
 
-        const productos = await res.json()
+        const productos = await res.json();
 
-        if (productosNuevos) productosNuevos.map((producto) => productos.push(producto))
+        const productosNuevos = JSON.parse(
+            localStorage.getItem("productosNuevos")
+        ) || [];
 
-        if (validateEliminateProduct) return validateEliminateProduct
+        const validateEliminateProduct = JSON.parse(
+            localStorage.getItem("productos")
+        );
 
+        const productosBase = validateEliminateProduct ?? productos;
 
+        const productosActualizados = productosNuevos.filter(
+            nuevo => !productosBase.some(
+                producto => producto.id === nuevo.id
+            )
+        );
 
-        return productos;
+        return [...productosBase, ...productosActualizados];
 
     } catch (err) {
-        console.error(err)
+        console.error(err);
         return [];
     }
 }
