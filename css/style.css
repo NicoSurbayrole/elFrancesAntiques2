@@ -1321,3 +1321,23 @@ footer {
 .is-admin{
   display: none;
 }
+
+.is-logged{
+  display: none;
+}
+
+.btn__logOut{
+  border: 1px solid var(--brd-color);
+  background-color: transparent;
+  color: #c69d23;
+  padding: 2px;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn__logOut:active{
+  transform: scale(0.98);
+}
