@@ -8,7 +8,11 @@ function viewProducts(productos) {
     listaProductos.innerHTML = productos.map(producto => `
     <div id="eliminarProducto">
         <div class="eliminarProducto__container">
-            <img class="eliminarProducto__img" src=${producto.img_url} alt="">
+            <img class="product__img"
+     src="${img_url.startsWith("http")
+            ? img_url
+            : new URL(`../../${img_url.replace(/^\/+/, "")}`, import.meta.url).href}"
+     alt="${nombre}">
             <div class="eliminarProducto__info">
                 <h3>${producto.nombre}</h3>
                 <span>PRECIO: $${producto.precio_ars}</span>
@@ -36,6 +40,6 @@ listaProductos.addEventListener("click", (e) => {
 
     localStorage.setItem("productos", JSON.stringify(productos));
     alert("producto eliminado correctamente")
-    pagination(productos,viewProducts);
+    pagination(productos, viewProducts);
 });
 
