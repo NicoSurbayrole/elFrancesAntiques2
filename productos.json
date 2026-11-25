@@ -6,7 +6,7 @@
         "estilo": "Luis XVI",
         "precio_ars": 150000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 1
     },
     {
@@ -16,7 +16,7 @@
         "estilo": "Art Déco",
         "precio_ars": 220000,
         "disponibilidad": "En subasta",
-        "img_url": "/img/products_img/2.png",
+        "img_url": "./img/products_img/2.png",
         "stock": 10
     },
     {
@@ -26,7 +26,7 @@
         "estilo": "Clásico",
         "precio_ars": 450000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/3.png",
+        "img_url": "./img/products_img/3.png",
         "stock": 2
     },
     {
@@ -36,7 +36,7 @@
         "estilo": "Inglés",
         "precio_ars": 380000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/4.png",
+        "img_url": "./img/products_img/4.png",
         "stock": 20
     },
     {
@@ -46,7 +46,7 @@
         "estilo": "Académico",
         "precio_ars": 290000,
         "disponibilidad": "En subasta",
-        "img_url": "/img/products_img/5.png",
+        "img_url": "./img/products_img/5.png",
         "stock": 13
     },
     {
@@ -56,7 +56,7 @@
         "estilo": "Imperio",
         "precio_ars": 180000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/6.png",
+        "img_url": "./img/products_img/6.png",
         "stock": 2
     },
     {
@@ -66,7 +66,7 @@
         "estilo": "Luis XV",
         "precio_ars": 310000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/7.png",
+        "img_url": "./img/products_img/7.png",
         "stock": 2
     },
     {
@@ -76,7 +76,7 @@
         "estilo": "Francés",
         "precio_ars": 125000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/8.png",
+        "img_url": "./img/products_img/8.png",
         "stock": 2
     },
     {
@@ -86,7 +86,7 @@
         "estilo": "LXV",
         "precio_ars": 580000,
         "disponibilidad": "En subasta",
-        "img_url": "/img/products_img/9.png",
+        "img_url": "./img/products_img/9.png",
         "stock": 2
     },
     {
@@ -96,7 +96,7 @@
         "estilo": "Antiguo",
         "precio_ars": 95000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/10.png",
+        "img_url": "./img/products_img/10.png",
         "stock": 2
     },
     {
@@ -106,7 +106,7 @@
         "estilo": "Luis XVI",
         "precio_ars": 150000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -116,7 +116,7 @@
         "estilo": "Art Déco",
         "precio_ars": 220000,
         "disponibilidad": "En subasta",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -126,7 +126,7 @@
         "estilo": "Clásico",
         "precio_ars": 450000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -136,7 +136,7 @@
         "estilo": "Inglés",
         "precio_ars": 380000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -146,7 +146,7 @@
         "estilo": "Académico",
         "precio_ars": 290000,
         "disponibilidad": "En subasta",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -156,7 +156,7 @@
         "estilo": "Imperio",
         "precio_ars": 180000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -166,7 +166,7 @@
         "estilo": "Luis XV",
         "precio_ars": 310000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -176,7 +176,7 @@
         "estilo": "Francés",
         "precio_ars": 125000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -186,7 +186,7 @@
         "estilo": "LXV",
         "precio_ars": 580000,
         "disponibilidad": "En subasta",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -196,7 +196,7 @@
         "estilo": "Antiguo",
         "precio_ars": 95000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -206,7 +206,7 @@
         "estilo": "Luis XVI",
         "precio_ars": 150000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -216,7 +216,7 @@
         "estilo": "Art Déco",
         "precio_ars": 220000,
         "disponibilidad": "En subasta",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -226,7 +226,7 @@
         "estilo": "Clásico",
         "precio_ars": 450000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -236,7 +236,7 @@
         "estilo": "Inglés",
         "precio_ars": 380000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -246,7 +246,7 @@
         "estilo": "Académico",
         "precio_ars": 290000,
         "disponibilidad": "En subasta",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -256,7 +256,7 @@
         "estilo": "Imperio",
         "precio_ars": 180000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -266,7 +266,7 @@
         "estilo": "Luis XV",
         "precio_ars": 310000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -276,7 +276,7 @@
         "estilo": "Francés",
         "precio_ars": 125000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -286,7 +286,7 @@
         "estilo": "LXV",
         "precio_ars": 580000,
         "disponibilidad": "En subasta",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     },
     {
@@ -296,7 +296,7 @@
         "estilo": "Antiguo",
         "precio_ars": 95000,
         "disponibilidad": "Disponible",
-        "img_url": "/img/products_img/1.png",
+        "img_url": "./img/products_img/1.png",
         "stock": 2
     }
 ]
