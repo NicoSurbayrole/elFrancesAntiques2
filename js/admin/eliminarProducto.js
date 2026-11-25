@@ -8,7 +8,7 @@ function viewProducts(productos) {
     listaProductos.innerHTML = productos.map(producto => `
     <div id="eliminarProducto">
         <div class="eliminarProducto__container">
-            <img class="product__img" src="${producto.img_url.startsWith("http") ? producto.img_url : new URL(`../../${producto.img_url.replace(/^\/+/, "")}`, import.meta.url).href} "alt="${producto.nombre}">
+            <img class="product__img" src="${new URL(`/elFrancesAntiques2${producto.img_url}`, location.origin).href}" "alt="${producto.nombre}">
             <div class="eliminarProducto__info">
                 <h3>${producto.nombre}</h3>
                 <span>PRECIO: $${producto.precio_ars}</span>
