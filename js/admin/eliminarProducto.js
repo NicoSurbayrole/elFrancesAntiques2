@@ -9,7 +9,7 @@ function viewProducts(productos) {
         <div class="eliminarProducto__item">
             <div class="eliminarProducto__container">
                 <img
-                    class="product__img"
+                    class="eliminarProducto__img"
                     src="${new URL(`../../${producto.img_url.replace(/^\/+/, "")}`, import.meta.url).href}"
                     alt="${producto.nombre}"
                 >
