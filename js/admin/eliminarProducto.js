@@ -1,27 +1,37 @@
-import { getProducts } from "../products/getProducts.js"
-import { pagination } from "../products/pagination.js"
+import { getProducts } from "../products/getProducts.js";
+import { pagination } from "../products/pagination.js";
 
-const listaProductos = document.getElementById("eliminarProducto")
-let productos = await getProducts()
+const listaProductos = document.getElementById("eliminarProducto");
+let productos = await getProducts();
 
 function viewProducts(productos) {
     listaProductos.innerHTML = productos.map(producto => `
-    <div id="eliminarProducto">
-        <div class="eliminarProducto__container">
-            <img class="product__img" src="${new URL(`../../${producto.img_url.replace(/^\/+/, "")}`, import.meta.url).href}" alt="${producto.nombre}">
-            <div class="eliminarProducto__info">
-                <h3>${producto.nombre}</h3>
-                <span>PRECIO: $${producto.precio_ars}</span>
-                <span>STOCK: ${producto.stock}</span>
+        <div class="eliminarProducto__item">
+            <div class="eliminarProducto__container">
+                <img
+                    class="product__img"
+                    src="${new URL(`../../${producto.img_url.replace(/^\/+/, "")}`, import.meta.url).href}"
+                    alt="${producto.nombre}"
+                >
+
+                <div class="eliminarProducto__info">
+                    <h3>${producto.nombre}</h3>
+                    <span>PRECIO: $${producto.precio_ars}</span>
+                    <span>STOCK: ${producto.stock}</span>
+                </div>
+
+                <button
+                    data-id="${producto.id}"
+                    class="eliminarProducto__btn"
+                >
+                    Eliminar producto
+                </button>
             </div>
-            <button data-id="${producto.id}" class="eliminarProducto__btn">eliminar producto</button>
         </div>
-    </div>
-`).join('')
+    `).join("");
 }
 
-
-pagination(productos, viewProducts)
+pagination(productos, viewProducts);
 
 listaProductos.addEventListener("click", (e) => {
     const btn = e.target.closest(".eliminarProducto__btn");
@@ -35,7 +45,9 @@ listaProductos.addEventListener("click", (e) => {
     );
 
     localStorage.setItem("productos", JSON.stringify(productos));
-    alert("producto eliminado correctamente")
+
+    alert("Producto eliminado correctamente");
+
     pagination(productos, viewProducts);
 });
 
