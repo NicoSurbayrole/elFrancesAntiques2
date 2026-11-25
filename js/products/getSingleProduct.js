@@ -1,6 +1,7 @@
 export async function getSingleProduct(productId) {
     try {
-        const res = await fetch("/productos.json")
+        const url = new URL("../../productos.json", import.meta.url);
+        const res = await fetch(url);
 
         if (!res.ok) {
             throw new Error("Error al obtener el producto")

@@ -1,6 +1,7 @@
 export async function getProducts() {
     try {
-        const res = await fetch("/productos.json")
+        const url = new URL("../../productos.json", import.meta.url);
+        const res = await fetch(url);
 
         const productosNuevos = JSON.parse(localStorage.getItem("productosNuevos"))
         const validateEliminateProduct = JSON.parse(localStorage.getItem("productos"))
@@ -12,8 +13,8 @@ export async function getProducts() {
         const productos = await res.json()
 
         if (productosNuevos) productosNuevos.map((producto) => productos.push(producto))
-        
-        if(validateEliminateProduct) return validateEliminateProduct
+
+        if (validateEliminateProduct) return validateEliminateProduct
 
 
 
